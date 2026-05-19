@@ -4,3 +4,5 @@ _build/
 .claude/
 __pycache__/
 refs/
+UnicodeData-3.2.0.txt
+DerivedNormalizationProps-3.2.0.txt

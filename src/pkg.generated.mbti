@@ -1,0 +1,28 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "chawyehsu/stringprep/src"
+
+// Values
+pub fn nameprep(String) -> String raise StringprepError
+
+pub fn nodeprep(String) -> String raise StringprepError
+
+pub fn resourceprep(String) -> String raise StringprepError
+
+pub fn saslprep(String) -> String raise StringprepError
+
+pub fn x520prep(String, case_fold~ : Bool) -> String raise StringprepError
+
+// Errors
+pub(all) suberror StringprepError {
+  ProhibitedCharacter(Char)
+  ProhibitedBidirectionalText
+  StartsWithCombiningCharacter
+  EmptyString
+}
+
+// Types and methods
+
+// Type aliases
+
+// Traits
+
