@@ -7,7 +7,7 @@ pub fn saslprep(s : String) -> String raise StringprepError {
   if is_ascii_safe(s) {
     return s
   }
-  let sb = StringBuilder()
+  let sb = StringBuilder::new()
   for c in s {
     if non_ascii_space_character(c) {
       sb.write_char(' ')
@@ -52,7 +52,7 @@ pub fn nameprep(s : String) -> String raise StringprepError {
   if is_nameprep_ascii_fast(s) {
     return s
   }
-  let sb = StringBuilder()
+  let sb = StringBuilder::new()
   for c in s {
     if !commonly_mapped_to_nothing(c) {
       let folded = case_fold_for_nfkc(c)
@@ -97,7 +97,7 @@ pub fn nodeprep(s : String) -> String raise StringprepError {
   if is_nodeprep_ascii_fast(s) {
     return s
   }
-  let sb = StringBuilder()
+  let sb = StringBuilder::new()
   for c in s {
     if !commonly_mapped_to_nothing(c) {
       let folded = case_fold_for_nfkc(c)
@@ -145,7 +145,7 @@ pub fn resourceprep(s : String) -> String raise StringprepError {
   if is_resourceprep_ascii_fast(s) {
     return s
   }
-  let sb = StringBuilder()
+  let sb = StringBuilder::new()
   for c in s {
     if !commonly_mapped_to_nothing(c) {
       sb.write_char(c)
@@ -191,7 +191,7 @@ pub fn x520prep(s : String, case_fold~ : Bool) -> String raise StringprepError {
   if is_x520_ascii_fast(s, case_fold) {
     return s
   }
-  let sb = StringBuilder()
+  let sb = StringBuilder::new()
   for c in s {
     if !x520_mapped_to_nothing(c) {
       if x520_mapped_to_space(c) {
@@ -202,7 +202,7 @@ pub fn x520prep(s : String, case_fold~ : Bool) -> String raise StringprepError {
     }
   }
   let normalized = if case_fold {
-    let sb2 = StringBuilder()
+    let sb2 = StringBuilder::new()
     for c in sb.to_string() {
       let folded = case_fold_for_nfkc(c)
       for fc in folded {

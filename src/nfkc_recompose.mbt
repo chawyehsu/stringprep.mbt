@@ -95,7 +95,7 @@ fn nfkc(s : String) -> String {
     None => ()
   }
 
-  let sb = StringBuilder()
+  let sb = StringBuilder::new()
   for c in result {
     sb.write_char(c)
   }
