@@ -5,5 +5,6 @@
   "repository": "https://github.com/chawyehsu/stringprep.mbt",
   "license": "Apache-2.0 OR Unlicense",
   "keywords": ["unicode", "stringprep", "algorithm", "idna"],
-  "description": "Preparation of Internationalized Strings (stringprep) in MoonBit"
+  "description": "Preparation of Internationalized Strings (stringprep) in MoonBit",
+  "exclude": ["codegen"]
 }
