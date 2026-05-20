@@ -1,5 +1,9 @@
 {
   "name": "chawyehsu/stringprep",
   "version": "0.0.1",
-  "repository": "https://github.com/chawyehsu/stringprep.mbt"
+  "readme": "README.md",
+  "repository": "https://github.com/chawyehsu/stringprep.mbt",
+  "license": "Apache-2.0 OR Unlicense",
+  "keywords": ["unicode", "stringprep", "algorithm", "idna"],
+  "description": "Preparation of Internationalized Strings (stringprep) in MoonBit"
 }
